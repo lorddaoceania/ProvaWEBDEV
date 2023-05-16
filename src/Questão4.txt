@@ -1,0 +1,38 @@
+Os hooks são funções especiais 
+fornecidas pelo React que permitem que você use recursos e funcionalidades do 
+React em componentes funcionais. 
+Eles foram introduzidos no React 16.8 como uma forma de 
+simplificar o compartilhamento de 
+lógica entre componentes e melhorar a 
+legibilidade e reutilização do código.
+
+Dois exemplos de hooks são:
+
+    useState:
+    O useState é um hook utilizado para adicionar estado a componentes funcionais. 
+    Ele retorna um par de valores: o estado atual e uma função para atualizar esse estado. 
+    O useState permite que você controle o estado interno de um componente sem a necessidade de uma classe.
+
+    Exemplo:
+    import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+Neste exemplo, 
+o useState é usado para adicionar um estado "count" ao componente Counter. 
+O valor inicial do estado é 0. 
+A função "setCount" é usada para atualizar o 
+valor do estado "count" quando o botão "Increment" é clicado.
